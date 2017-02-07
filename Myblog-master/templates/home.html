@@ -1,0 +1,27 @@
+<!-- home Pages -->
+
+{% extends "base.html" %}
+
+{% block content %}
+<div class="post">
+  {%for post in post_list%}
+  <section class="post">
+    <header class="post-header">
+      <h2 class="post-title"{{ post.title }}> </h2>
+      <p class="post-meta">Time: <a class="post-autor" href="#">{{post.date_time}}</a></p>
+    </header>
+    <div class="post-description">
+      <p>
+        {{post.content}}</p>
+    </div>
+  </section>
+  {% endfor %}
+</div>
+
+{% endblock%}
+
+
+<!--
+<h2 class="blog-post-title"> xxx </h2>
+<p class="blog-post-meta"> Year-Mon-Date xx:xx <a herf=""></a></p>
+-->
